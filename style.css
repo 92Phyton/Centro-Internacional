@@ -6,9 +6,18 @@ height: auto;
 }
 body{
   text-align:center;
+  background-color: #2C2C2C;
+  color: white;
 }
 img{
   display: block;
   margin: 0 auto;
 }
+h1{
+  color: #8A6A2F;  
+}
+a{
+  color: white;  
+}
+
 
