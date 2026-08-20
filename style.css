@@ -8,16 +8,49 @@ body{
   text-align:center;
   background-color: #F5F1E8;
   color:black;
+  font-family: Arial,
+  sans-serif;
+  padding: 30px;
 }
 img{
   display: block;
   margin: 0 auto;
 }
 h1{
+  font-size: 28px;
   color: #8A6A2F;  
 }
 a{
   color: blue;  
 }
-
-
+.menu{
+  max-width:500px;
+  margin: 30px auto;
+}
+.opcion{
+ display: block;
+ width: 100%;
+ padding: 18px;
+ margin: 12px 0;
+ border: none;
+ border-radius: 12px;
+ background-color: white;
+ color: #172A46;
+ font-size: 17px;
+ font-weight: bold;
+ cursor: pointer;
+ text-decoration:none;
+ box-sizing: border-box;
+}
+.opcion:hover{
+  transform: scale(1.02);
+  background-color: #F5F1E8;
+}
+.whatsapp{
+  background-color: #25D366;
+  color: white;
+}
+.contenido h2{
+  color: #172A46;
+  text-align: center;
+}
