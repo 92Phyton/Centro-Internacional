@@ -1,18 +1,31 @@
 body {
     margin: 0;
     min-height: 100vh;
-
     background-color: #ababaf;
     color: white;
     font-family: Arial, sans-serif;
-
-    /* CENTRAR TODO EN LA PÁGINA */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
+
+
+
+
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.9),
+                        rgba(0, 0, 0, 0.9)),
+        url("iglesia.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 header {
@@ -99,4 +112,13 @@ h1 {
 
 .contenido h2 {
     color: #172A46;
+}
+
+.opcion {
+    transition: 0.3s;
+}
+
+.opcion:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
