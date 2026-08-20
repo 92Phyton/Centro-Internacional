@@ -4,3 +4,11 @@ width: 200px;
 height: auto;
 
 }
+body{
+  text-align:center;
+}
+img{
+  display: block;
+  margin: 0 auto;
+}
+
