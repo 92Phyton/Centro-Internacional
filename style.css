@@ -6,8 +6,8 @@ height: auto;
 }
 body{
   text-align:center;
-  background-color: #2C2C2C;
-  color: white;
+  background-color: #F5F1E8;
+  color:black;
 }
 img{
   display: block;
@@ -17,7 +17,7 @@ h1{
   color: #8A6A2F;  
 }
 a{
-  color: white;  
+  color: blue;  
 }
 
 
