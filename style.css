@@ -1,56 +1,102 @@
-img {
+body {
+    margin: 0;
+    min-height: 100vh;
 
-width: 200px;
-height: auto;
+    background-color: #ababaf;
+    color: white;
+    font-family: Arial, sans-serif;
 
+    /* CENTRAR TODO EN LA PÁGINA */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
 }
-body{
-  text-align:center;
-  background-color: #F5F1E8;
-  color:black;
-  font-family: Arial,
-  sans-serif;
-  padding: 30px;
+
+header {
+    margin-bottom: 20px;
 }
-img{
-  display: block;
-  margin: 0 auto;
+
+header img {
+    width: 130px;
+    margin-bottom: 10px;
 }
-h1{
-  font-size: 28px;
-  color: #8A6A2F;  
+
+h1 {
+    font-size: 26px;
+    margin: 10px 0;
 }
-a{
-  color: blue;  
+
+
+/* MENÚ VERTICAL EN EL CENTRO */
+
+.menu {
+    width: 90%;
+    max-width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
 }
-.menu{
-  max-width:500px;
-  margin: 30px auto;
+
+
+/* OPCIONES */
+
+.opcion {
+    width: 100%;
+    padding: 18px 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: white;
+    color: #172A46;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    text-decoration: none;
+    cursor: pointer;
+    box-sizing: border-box;
 }
-.opcion{
- display: block;
- width: 100%;
- padding: 18px;
- margin: 12px 0;
- border: none;
- border-radius: 12px;
- background-color: white;
- color: #172A46;
- font-size: 17px;
- font-weight: bold;
- cursor: pointer;
- text-decoration:none;
- box-sizing: border-box;
+
+
+/* EFECTO AL PASAR EL RATÓN */
+
+.opcion:hover {
+    transform: scale(1.03);
 }
-.opcion:hover{
-  transform: scale(1.02);
-  background-color: #F5F1E8;
+
+
+/* BOTÓN DE WHATSAPP */
+
+.whatsapp {
+    background-color: #25D366;
+    color: white;
 }
-.whatsapp{
-  background-color: #25D366;
-  color: white;
+
+
+/* CONTENIDO QUE SE ABRE */
+
+.contenido {
+    display: none;
+
+    width: 90%;
+    max-width: 500px;
+
+    margin-top: 20px;
+    padding: 25px;
+
+    background-color: white;
+    color: #333;
+
+    border-radius: 12px;
+    box-sizing: border-box;
 }
-.contenido h2{
-  color: #172A46;
-  text-align: center;
+
+.contenido h2 {
+    color: #172A46;
 }
