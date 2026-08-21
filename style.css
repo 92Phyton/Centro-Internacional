@@ -1,12 +1,13 @@
 *{
 box-sizing: border-box;
-margin: 0 auto;
-padding: 0 auto;
+margin: 0 ;
+padding: 0 ;
 }
 html{
     width: 100%;
     overflow-x:hidden ;
 }
+
 
 body {
     margin: 0 auto;
@@ -20,12 +21,6 @@ body {
     align-items: center;
     text-align: center;
 
-
-
-
-    min-height: 100vh;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
 
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.9),
@@ -63,65 +58,89 @@ h1 {
     flex-direction: column;
     align-items: center;
     gap: 12px;
+
+    min-height: 105px;
+    padding: 15px 20px;
+    font-size: 22px;
 }
 
-
-/* OPCIONES */
-
-.opcion {
+.menu-btn {
     width: 100%;
-    padding: 18px 15px;
+    min-height: 105px;
+    padding: 15px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
 
     border: none;
-    border-radius: 10px;
+    border-radius: 18px;
+    background: white;
 
-    background-color: white;
-    color: #172A46;
-
-    font-size: 17px;
+    color: #172b4d;
+    font-size: 26px;
     font-weight: bold;
 
-    text-decoration: none;
     cursor: pointer;
     box-sizing: border-box;
+
+    margin-bottom: 20px;
+}
+.menu-btn {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+.menu-btn img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.menu-btn span {
+    text-align: left;
 }
 
 
-/* EFECTO AL PASAR EL RATÓN */
-
-.opcion:hover {
-    transform: scale(1.03);
-}
 
 
-/* BOTÓN DE WHATSAPP */
-
-.whatsapp {
-    background-color: #25D366;
-    color: white;
-}
 
 
 /* CONTENIDO QUE SE ABRE */
 
 .contenido {
     display: none;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #172b4d;
 
-    width: 90%;
-    max-width: 500px;
+    margin: 10px 0 15px 0;
+    padding: 15px 20px;
 
-    margin-top: 20px;
-    padding: 25px;
+    border-radius: 15px;
 
-    background-color: white;
-    color: #333;
-
-    border-radius: 12px;
+    text-align: center;
     box-sizing: border-box;
 }
 
+.contenido.activo {
+    display: block;
+}
+
 .contenido h2 {
-    color: #172A46;
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.contenido p {
+    margin: 5px 0;
+    font-size: 18px;
+    line-height: 1.4;
 }
 
 .opcion {
@@ -131,4 +150,119 @@ h1 {
 .opcion:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 600px) {
+
+    .contenido {
+        padding: 14px 15px;
+    }
+
+    .contenido h2 {
+        font-size: 21px;
+    }
+
+    .contenido p {
+        font-size: 16px;
+    }
+}
+.facebook-btn {
+    width: 100%;
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+
+    padding: 15px 25px;
+    box-sizing: border-box;
+
+    background-color: white;
+    color: #172b4d;
+
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: bold;
+
+    border-radius: 18px;
+    margin: 15px 0;
+
+    transition: 0.3s;
+}
+
+.facebook-btn img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.facebook-btn:hover {
+    transform: scale(1.02);
+}
+@media (max-width: 600px) {
+
+    .facebook-btn {
+        min-height: 90px;
+        padding: 15px 20px;
+        gap: 14px;
+        font-size: 22px;
+    }
+
+    .facebook-btn img {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+
+.whatsapp-btn {
+    width: 100%;
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+
+    padding: 15px 25px;
+    box-sizing: border-box;
+
+    background-color: white;
+    color: #0f971a;
+
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: bold;
+
+    border-radius: 18px;
+    margin: 15px 0;
+
+    transition: 0.3s;
+}
+
+.whatsapp-btn img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 600px) {
+
+    .whatsapp-btn {
+        min-height: 90px;
+        padding: 15px 20px;
+        gap: 14px;
+        font-size: 22px;
+    }
+
+    .whatsapp-btn img {
+        width: 48px;
+        height: 48px;
+    }
 }

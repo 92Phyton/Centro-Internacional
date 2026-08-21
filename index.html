@@ -25,43 +25,44 @@
 
         <nav class="menu">
 
-            <a class="opcion whatsapp"
+            <a
                href="https://wa.me/59133709450"
+               class="whatsapp-btn"
                target="_blank">
-                📱 Escríbenos por WhatsApp
+                <img src="logo-whatsapp.jpg" alt="whatsapp">
+                      <span>Escribenos al whatsapp</span>
+            </a>
+              <a href="https://www.facebook.com/AlientoDeLife" 
+               class="facebook-btn" 
+                target="_blank">
+                 <img src="logo-facebook.jpg" alt="Facebook">
+                      <span>Síguenos en Facebook</span>
             </a>
 
-
-            <button class="opcion" onclick="mostrarContenido('instituto')">
-                📚🔰 Instituto de Liderazgo Hechos
+              <button class="menu-btn" onclick="mostrarContenido('instituto')">
+                <img src="logo-instituto.jpg" alt="Instituto">
+                 <span>Instituto de Liderazgo Hechos</span>
             </button>
+                  <!-- CONTENIDO DEL INSTITUTO -->
+            <section id="instituto" class="contenido">
+             <h2>Discipulado Nivel 1,2 Y 3</h2>
+
+              <p>
+                <strong>Miércoles Discipulado Nivel 1:</strong> 7:30 PM
+              </p>
+
+               <p>
+                <strong>Sábados Discipulado Nivel 3:</strong> 7:00 PM
+               </p>
+            </section>
+ 
 
 
-            <button class="opcion" onclick="mostrarContenido('grupos')">
+            <button class="menu-btn" onclick="mostrarContenido('grupos')">
                 💝👪😎 Grupos de Conexión cerca de ti
             </button>
-
-
-            <button class="opcion" onclick="mostrarContenido('servicios')">
-                🏛 Días de servicios
-               
-            </button>
-
-        </nav>
-
-
-        <section id="instituto" class="contenido">
-            <h2>Instituto de Liderazgo Hechos</h2>
-
-            <p>
-                 <p><strong>Miércoles Discipulado Nivel 1:</strong> 7:30 PM</p>
-            <p><strong>Sabados Discipulado Nivel 3:</strong> 7:00 PM</p>
-            </p>
-        </section>
-
-
-        <section id="grupos" class="contenido">
-            <h2>Grupos de Conexión</h2>
+                  <section id="grupos" class="contenido">
+            <h2>🦁Red Judá, 🐴Red Issacar</h2>
 
             <p>
                 Encuentra un Grupo de Conexión cerca de ti.
@@ -70,13 +71,21 @@
             </p>
         </section>
 
+            <button class="menu-btn" onclick="mostrarContenido('servicios')">
+              <img src="Servicio.png" alt="servicios">
+             <span>Dias de servicios</span>
+               
+            </button>
+             <section id="servicios" class="contenido">
+            <h2>Servicio Central</h2>
 
-        <section id="servicios" class="contenido">
-            <h2>Días de Servicio</h2>
-
-            <p><strong>Domingo Servicio Central:</strong> 18:30 PM</p>
+            <p><strong>Domingo:</strong> 18:30 PM</p>
           
         </section>
+
+        </nav>
+
+
 
     </main>
 
