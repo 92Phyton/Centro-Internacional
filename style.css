@@ -1,490 +1,369 @@
+
+/* =====================================================
+   CENTRO INTERNACIONAL REY DE REYES
+   CSS PROFESIONAL RESPONSIVE
+   Compatible con computadora, tablet y celular.
+===================================================== */
+
+/* RESET GENERAL */
 *{
-box-sizing: border-box;
-margin: 0 ;
-padding: 0 ;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
+
 html{
-    width: 100%;
-    overflow-x:hidden ;
+    width:100%;
+    overflow-x:hidden;
+    scroll-behavior:smooth;
 }
 
-
-body {
-    margin: 0 auto;
-    min-height: 100vh;
-    background-color: #ababaf;
-    color: white;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
+body{
+    min-height:100vh;
+    font-family:Arial, Helvetica, sans-serif;
+    color:white;
+    display:flex;
+    justify-content:center;
+    background-color:#111;
 
     background-image:
-        linear-gradient(rgba(0, 0, 0, 0.9),
-                        rgba(0, 0, 0, 0.9)),
+        linear-gradient(rgba(0,0,0,.80), rgba(0,0,0,.85)),
         url("iglesia.jpg");
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
 }
 
-header {
-    margin-bottom: 20px;
+/* CONTENEDOR PRINCIPAL */
+
+.pagina{
+    width:100%;
+    max-width:650px;
+    padding:20px 15px 40px;
 }
 
-header img {
-    width: 130px;
-    margin-bottom: 10px;
+/* CABECERA */
+
+header{
+    text-align:center;
+    margin-bottom:30px;
 }
 
-h1 {
-    font-size: 26px;
-    margin: 10px 0;
+header img{
+    width:140px;
+    margin-bottom:15px;
 }
 
-
-/* MENÚ VERTICAL EN EL CENTRO */
-
-.menu {
-    width: 100%;
-    max-width: 500px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-
-    min-height: 105px;
-    padding: 15px 20px;
-    font-size: 22px;
+header h1{
+    font-size:42px;
+    font-weight:bold;
+    line-height:1.2;
+    margin-bottom:10px;
 }
 
-.menu-btn {
-    width: 100%;
-    min-height: 105px;
-    padding: 15px 25px;
-
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 18px;
-
-    border: none;
-    border-radius: 18px;
-    background: white;
-
-    color: #172b4d;
-    font-size: 26px;
-    font-weight: bold;
-
-    cursor: pointer;
-    box-sizing: border-box;
-
-    margin-bottom: 20px;
-}
-.menu-btn {
-    transition: transform 0.3s, box-shadow 0.3s;
+header p{
+    font-size:24px;
+    color:#F5F5F5;
 }
 
-.menu-btn:hover {
-    transform: scale(1.02);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-}
-.menu-btn img {
-    width: 55px;
-    height: 55px;
-    object-fit: contain;
-    flex-shrink: 0;
+/* MENU */
+
+.menu{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
 }
 
-.menu-btn span {
-    text-align: left;
+/* BOTONES GENERALES */
+
+.menu-btn,
+.whatsapp-btn,
+.facebook-btn{
+    width:100%;
+    min-height:105px;
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    padding:18px 22px;
+
+    border:none;
+    border-radius:22px;
+
+    background:white;
+    color:#112B5B;
+
+    text-decoration:none;
+    cursor:pointer;
+
+    font-size:28px;
+    font-weight:bold;
+
+    transition:.30s;
 }
 
-
-
-
-
-
-/* CONTENIDO QUE SE ABRE */
-
-.contenido {
-    display: none;
-    background-color: rgba(255, 255, 255, 0.95);
-    color: #172b4d;
-
-    margin: 10px 0 15px 0;
-    padding: 15px 20px;
-
-    border-radius: 15px;
-
-    text-align: center;
-    box-sizing: border-box;
+.menu-btn:hover,
+.whatsapp-btn:hover,
+.facebook-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
 }
 
-.contenido.activo {
-    display: block;
+/* ICONOS DE BOTONES */
+
+.menu-btn img,
+.whatsapp-btn img,
+.facebook-btn img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+    flex-shrink:0;
 }
 
-.contenido h2 {
-    margin: 0 0 10px 0;
-    font-size: 24px;
-    line-height: 1.2;
+.whatsapp-btn{
+    color:#0E9C1D;
 }
 
-.contenido p {
-    margin: 5px 0;
-    font-size: 18px;
-    line-height: 1.4;
+.facebook-btn{
+    color:#173B88;
 }
 
-.opcion {
-    transition: 0.3s;
+/* TEXTO BOTONES */
+
+.menu-btn span,
+.whatsapp-btn span,
+.facebook-btn span{
+    text-align:left;
+    line-height:1.2;
 }
 
-.opcion:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-}
-@media (max-width: 600px) {
+/* CONTENIDO DESPLEGABLE */
 
-    .contenido {
-        padding: 14px 15px;
-    }
-
-    .contenido h2 {
-        font-size: 21px;
-    }
-
-    .contenido p {
-        font-size: 16px;
-    }
-}
-.facebook-btn {
-    width: 100%;
-    min-height: 100px;
-
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 18px;
-
-    padding: 15px 25px;
-    box-sizing: border-box;
-
-    background-color: white;
-    color: #172b4d;
-
-    text-decoration: none;
-    font-size: 26px;
-    font-weight: bold;
-
-    border-radius: 18px;
-    margin: 15px 0;
-
-    transition: 0.3s;
+.contenido{
+    display:none;
+    background:rgba(255,255,255,.96);
+    color:#172B4D;
+    border-radius:18px;
+    padding:20px;
+    margin-top:-10px;
+    margin-bottom:15px;
 }
 
-.facebook-btn img {
-    width: 55px;
-    height: 55px;
-    object-fit: contain;
-    flex-shrink: 0;
+.contenido.activo{
+    display:block;
 }
 
-.facebook-btn:hover {
-    transform: scale(1.02);
-}
-@media (max-width: 600px) {
-
-    .facebook-btn {
-        min-height: 90px;
-        padding: 15px 20px;
-        gap: 14px;
-        font-size: 22px;
-    }
-
-    .facebook-btn img {
-        width: 48px;
-        height: 48px;
-    }
+.contenido h2{
+    font-size:24px;
+    margin-bottom:12px;
 }
 
-
-.whatsapp-btn {
-    width: 100%;
-    min-height: 100px;
-
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 18px;
-
-    padding: 15px 25px;
-    box-sizing: border-box;
-
-    background-color: white;
-    color: #0f971a;
-
-    text-decoration: none;
-    font-size: 26px;
-    font-weight: bold;
-
-    border-radius: 18px;
-    margin: 15px 0;
-
-    transition: 0.3s;
+.contenido p{
+    font-size:18px;
+    line-height:1.5;
+    margin:8px 0;
 }
 
-.whatsapp-btn img {
-    width: 55px;
-    height: 55px;
-    object-fit: contain;
-    flex-shrink: 0;
+/* =============================================
+   REDES SOCIALES (FINAL DE LA PÁGINA)
+============================================= */
+
+.redes-finales{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:16px;
 }
 
-.whatsapp-btn:hover {
-    transform: scale(1.02);
+/* TARJETAS */
+
+.red-social{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    background:rgba(255,255,255,.96);
+    color:#112B5B;
+
+    text-decoration:none;
+
+    padding:12px 18px;
+    border-radius:18px;
+
+    min-width:190px;
+
+    font-size:15px;
+    font-weight:bold;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.30);
+
+    transition:.30s;
 }
 
-@media (max-width: 600px) {
-
-    .whatsapp-btn {
-        min-height: 90px;
-        padding: 15px 20px;
-        gap: 14px;
-        font-size: 22px;
-    }
-
-    .whatsapp-btn img {
-        width: 48px;
-        height: 48px;
-    }
-}/* =========================================
-   REDES SOCIALES INFERIORES
-   ========================================= */
-
-.redes-issacar,
-
-
-
-
-
-/* BOTONES DE REDES */
-.red-social {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    min-width: 170px;
-    padding: 10px 16px;
-
-    background: rgba(255, 255, 255, 0.94);
-
-    color: #333;
-    text-decoration: none;
-
-    border-radius: 12px;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        background 0.3s ease;
+.red-social:hover{
+    transform:translateY(-4px) scale(1.03);
 }
 
+/* LOGOS */
 
-/* MOVIMIENTO AL PASAR EL MOUSE */
-.red-social:hover {
-    transform: translateY(-5px) scale(1.03);
-
-    box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.45);
-}
-.logo-red {
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
-    margin-right: 12px;
+.logo-red{
+    width:42px;
+    height:42px;
+    object-fit:contain;
 }
 
-/* ICONOS */
-.icono {
-    width: 32px;
-    height: 32px;
+/* COLORES AL PASAR EL MOUSE */
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    font-size: 18px;
-    font-weight: bold;
-
-    flex-shrink: 0;
+.facebook-issacar:hover{
+    background:#EDF4FF;
 }
 
-
-/* RED ISSACAR */
-.issacar .icono {
-    background: #222;
-    color: white;
+.tiktok-issacar:hover,
+.tiktok-juda:hover{
+    background:#F2F2F2;
 }
 
-.issacar:hover {
-    background: #f5f5f5;
-}
-
-
-/* FACEBOOK */
-.facebook-issacar .icono {
-    background: #1877f2;
-    color: white;
-    font-family: Arial, sans-serif;
-}
-
-.facebook-issacar:hover {
-    background: #eaf2ff;
-}
-
-
-/* TIKTOK ISSACAR */
-.tiktok-issacar .icono {
-    background: #000;
-    color: white;
-}
-
-.tiktok-issacar:hover {
-    background: #eeeeee;
-}
-
-
-/* TIKTOK JUDÁ */
-.tiktok-juda .icono {
-    background: #000;
-    color: white;
-}
-
-.tiktok-juda:hover {
-    background: #eeeeee;
-}
-
-
-/* =========================================
+/* =============================================
    TABLET
-   ========================================= */
+============================================= */
 
-@media (max-width: 900px) {
+@media (max-width:900px){
 
-    .redes-issacar {
-        left: 15px;
-        bottom: 15px;
+    .pagina{
+        max-width:600px;
     }
 
-    .redes-juda {
-        right: 15px;
-        bottom: 15px;
+    header h1{
+        font-size:36px;
     }
 
-    .red-social {
-        min-width: 145px;
-        padding: 8px 12px;
-        font-size: 13px;
+    .menu-btn,
+    .facebook-btn,
+    .whatsapp-btn{
+        font-size:24px;
+        min-height:95px;
     }
 
-    .icono {
-        width: 28px;
-        height: 28px;
-        font-size: 16px;
-    }
 }
 
+/* =============================================
+   CELULAR
+============================================= */
 
+@media (max-width:768px){
 
-   /* =========================================
-   REDES SOCIALES - ADAPTACIÓN PARA CELULAR
-   ========================================= */
+    body{
+        background-attachment:scroll;
+    }
 
-@media (max-width: 768px) {
+    .pagina{
+        padding:15px;
+    }
 
-    /* =========================================
-   REDES ISSACAR Y JUDÁ - AL FINAL DE LA PÁGINA
-   ========================================= */
+    header img{
+        width:115px;
+    }
 
-.redes-issacar,
-.redes-juda {
-    position: relative;      /* Ya no quedan flotando */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    margin: 30px auto;
-    z-index: 1;
-}
+    header h1{
+        font-size:30px;
+    }
 
-/* Celular */
-@media (max-width: 768px){
+    header p{
+        font-size:20px;
+    }
 
-    .redes-issacar,
-    .redes-juda{
-        width: 100%;
-        flex-direction: column;
-        margin: 20px 0;
-        gap: 10px;
+    .menu{
+        gap:14px;
+    }
+
+    .menu-btn,
+    .facebook-btn,
+    .whatsapp-btn{
+
+        min-height:90px;
+
+        padding:14px 16px;
+
+        gap:14px;
+
+        font-size:20px;
+
+        border-radius:18px;
+    }
+
+    .menu-btn img,
+    .facebook-btn img,
+    .whatsapp-btn img{
+
+        width:48px;
+        height:48px;
+    }
+
+    .contenido{
+        padding:16px;
+    }
+
+    .contenido h2{
+        font-size:21px;
+    }
+
+    .contenido p{
+        font-size:16px;
+    }
+
+    /* REDES AL FINAL */
+
+    .redes-finales{
+        flex-direction:column;
+        align-items:center;
+        gap:14px;
+        margin-top:30px;
     }
 
     .red-social{
-        width: 90%;
-        max-width: 320px;
-        justify-content: flex-start;
+        width:100%;
+        max-width:340px;
+        justify-content:flex-start;
+        font-size:15px;
+        padding:14px 18px;
     }
 
     .logo-red{
-        width: 40px;
-        height: 40px;
+        width:38px;
+        height:38px;
     }
+
 }
 
-    /* BOTONES */
-    .red-social {
-        width: 180px;
-        min-height: 48px;
-        padding: 8px 10px;
+/* =============================================
+   CELULARES PEQUEÑOS
+============================================= */
 
-        display: flex;
-        align-items: center;
-        gap: 10px;
+@media (max-width:420px){
 
-        font-size: 12px;
-
-        border-radius: 12px;
-        box-sizing: border-box;
+    header h1{
+        font-size:26px;
     }
 
-    /* LOGOS */
-    .logo-red {
-        width: 35px;
-        height: 35px;
-
-        object-fit: contain;
-        flex-shrink: 0;
+    header p{
+        font-size:18px;
     }
 
-    /* TEXTO */
-    .red-social span {
-        white-space: normal;
-        text-align: left;
-        line-height: 1.2;
+    .menu-btn,
+    .facebook-btn,
+    .whatsapp-btn{
+        font-size:18px;
+        min-height:84px;
     }
+
+    .red-social{
+        font-size:14px;
+    }
+
 }
 

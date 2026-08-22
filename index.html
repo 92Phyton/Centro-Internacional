@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Centro Internacional Rey de Reyes</title>
 
     <link rel="stylesheet" href="style.css">
@@ -12,133 +11,134 @@
 
 <body>
 
-    <main class="pagina">
+<main class="pagina">
 
-        <header>
-            <img src="logo.png" alt="Logo Centro Internacional Rey de Reyes">
+    <!-- ENCABEZADO -->
+    <header>
+        <img src="logo.png" alt="Logo Centro Internacional Rey de Reyes">
 
-            <h1>CENTRO INTERNACIONAL REY DE REYES</h1>
+        <h1>CENTRO INTERNACIONAL REY DE REYES</h1>
 
-            <p>Bienvenido a nuestra iglesia</p>
-        </header>
+        <p>Bienvenido a nuestra iglesia</p>
+    </header>
 
+    <!-- MENÚ PRINCIPAL -->
+    <nav class="menu">
 
-        <nav class="menu">
+        <!-- WHATSAPP -->
+        <a href="https://wa.me/59133709450"
+           class="whatsapp-btn"
+           target="_blank">
 
-            <a
-               href="https://wa.me/59133709450"
-               class="whatsapp-btn"
-               target="_blank">
-                <img src="logo-whatsapp.jpg" alt="whatsapp">
-                      <span>Escribenos al whatsapp</span>
-            </a>
-              <a href="https://www.facebook.com/AlientoDeLife" 
-               class="facebook-btn" 
-                target="_blank">
-                 <img src="logo-facebook.jpg" alt="Facebook">
-                      <span>Síguenos en Facebook Pagina Oficial</span>
-                     
-            </a>
+            <img src="logo-whatsapp.jpg" alt="WhatsApp">
+            <span>Escríbenos al WhatsApp</span>
 
-              <button class="menu-btn" onclick="mostrarContenido('instituto')">
-                <img src="logo-instituto.jpg" alt="Instituto">
-                 <span>Instituto de Liderazgo Hechos</span>
-            </button>
-                  <!-- CONTENIDO DEL INSTITUTO -->
-            <section id="instituto" class="contenido">
-             <h2>Discipulado Nivel 1,2 Y 3</h2>
+        </a>
 
-              <p>
-                <strong>Miércoles Discipulado Nivel 1:</strong> 7:30 PM
-              </p>
+        <!-- FACEBOOK OFICIAL -->
+        <a href="https://www.facebook.com/AlientoDeLife"
+           class="facebook-btn"
+           target="_blank">
 
-               <p>
-                <strong>Sábados Discipulado Nivel 3:</strong> 7:00 PM
-               </p>
-            </section>
- 
+            <img src="logo-facebook.jpg" alt="Facebook">
+            <span>Síguenos en Facebook Página Oficial</span>
 
+        </a>
 
-            <button class="menu-btn" onclick="mostrarContenido('grupos')">
-               <img src="logo-grupos.png" alt="grupos">
-                 <span>Grupos de Conexión cerca de ti</span>
-            </button>
-                  <section id="grupos" class="contenido">
-            <h2>🦁Red Judá, 🐴Red Issacar</h2>
+        <!-- INSTITUTO -->
+        <button class="menu-btn" onclick="mostrarContenido('instituto')">
+
+            <img src="logo-instituto.jpg" alt="Instituto">
+            <span>Instituto de Liderazgo Hechos</span>
+
+        </button>
+
+        <section id="instituto" class="contenido">
+
+            <h2>Discipulado Nivel 1, 2 y 3</h2>
+
+            <p><strong>Miércoles Nivel 1:</strong> 7:30 PM</p>
+
+            <p><strong>Sábados Nivel 3:</strong> 7:00 PM</p>
+
+        </section>
+
+        <!-- GRUPOS -->
+        <button class="menu-btn" onclick="mostrarContenido('grupos')">
+
+            <img src="logo-grupos.png" alt="Grupos">
+            <span>Grupos de Conexión cerca de ti</span>
+
+        </button>
+
+        <section id="grupos" class="contenido">
+
+            <h2>🦁 Red Judá &nbsp;&nbsp; 🐴 Red Issacar</h2>
 
             <p>
                 Encuentra un Grupo de Conexión cerca de ti.
-                Todos los Jueves a las 19:30 horas en
-                 4 puntos de la ciudad. 
+                Todos los jueves a las <strong>19:30 horas</strong>
+                en cuatro puntos de la ciudad.
             </p>
+
         </section>
 
-            <button class="menu-btn" onclick="mostrarContenido('servicios')">
-              <img src="Servicio.png" alt="servicios">
-             <span>Dias de servicios</span>
-               
-            </button>
-             <section id="servicios" class="contenido">
+        <!-- SERVICIOS -->
+        <button class="menu-btn" onclick="mostrarContenido('servicios')">
+
+            <img src="Servicio.png" alt="Servicios">
+            <span>Días de Servicios</span>
+
+        </button>
+
+        <section id="servicios" class="contenido">
+
             <h2>Servicio Central</h2>
 
             <p><strong>Domingo:</strong> 18:30 PM</p>
-          
-         </section>
 
-        </nav>
+        </section>
 
+    </nav>
 
+    <!-- REDES SOCIALES (AL FINAL DE LA PÁGINA) -->
+    <section class="redes-finales">
 
-    </main>
-<!-- ==============================
-     REDES SOCIALES INFERIORES
-     ============================== -->
+        <a class="red-social facebook-issacar"
+           href="https://www.facebook.com/profile.php?id=61578638371425"
+           target="_blank">
 
-<!-- RED ISSACAR - PARTE INFERIOR IZQUIERDA -->
-<div class="redes-issacar">
+            <img src="logo-facebook.jpg" class="logo-red" alt="Facebook Red Issacar">
 
-    <a href="https://www.facebook.com/profile.php?id=61578638371425"
-       target="_blank"
-       class="red-social facebook-issacar">
+            <span>Red Issacar - Facebook</span>
 
-        <img src="logo-facebook.jpg"
-             alt="Logo Red Issacar"
-             class="logo-red">
+        </a>
 
-        <span>Red Issacar - Facebook</span>
-    </a>
+        <a class="red-social tiktok-issacar"
+           href="https://www.tiktok.com/@gdc.red.isacar?is_from_webapp=1&sender_device=pc"
+           target="_blank">
 
-    <a href="https://www.tiktok.com/@gdc.red.isacar?is_from_webapp=1&sender_device=pc"
-       target="_blank"
-       class="red-social tiktok-issacar">
+            <img src="logo-tiktok.jpg" class="logo-red" alt="TikTok Red Issacar">
 
-        <img src="logo-tiktok.jpg"
-             alt="Logo Red Issacar"
-             class="logo-red">
+            <span>Red Issacar - TikTok</span>
 
-        <span>Red Issacar - TikTok</span>
-    </a>
+        </a>
 
-</div>
+        <a class="red-social tiktok-juda"
+           href="https://www.tiktok.com/@gdc_red_juda_?is_from_webapp=1&sender_device=pc"
+           target="_blank">
 
+            <img src="logo-tiktok.jpg" class="logo-red" alt="TikTok Red Judá">
 
-<!-- RED JUDÁ - PARTE INFERIOR DERECHA -->
-<div class="redes-juda">
+            <span>Red Judá - TikTok</span>
 
-    <a href="https://www.tiktok.com/@gdc_red_juda_?is_from_webapp=1&sender_device=pc"
-       target="_blank"
-       class="red-social Tiktok-Juda">
+        </a>
 
-        <img src="logo-tiktok.jpg"
-             alt="Logo Red Juda"
-             class="logo-red">
+    </section>
 
-        <span>Red Juda - TikTok</span>
-    </a>
-</div>
+</main>
 
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 
