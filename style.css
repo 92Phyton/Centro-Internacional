@@ -328,7 +328,12 @@ h1 {
     box-shadow:
         0 8px 20px rgba(0, 0, 0, 0.45);
 }
-
+.logo-red {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    margin-right: 12px;
+}
 
 /* ICONOS */
 .icono {
