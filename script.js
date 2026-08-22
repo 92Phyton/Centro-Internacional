@@ -1,48 +1,56 @@
 function mostrarContenido(id) {
 
-    const contenido = document.getElementById(id);
-
-    if (contenido.style.display === "block") {
-        contenido.style.display = "none";
-    } else {
-
-        // Ocultar los demás contenidos
-        document.querySelectorAll(".contenido").forEach(function(elemento) {
-            elemento.style.display = "none";
-        });
-
-        // Mostrar el seleccionado
-        contenido.style.display = "block";
-    }
-}
-function mostrarContenido(id) {
     const contenidoSeleccionado = document.getElementById(id);
 
-    // Revisamos si el contenido seleccionado ya está abierto
+    // Revisar si el contenido seleccionado está abierto
     const estaAbierto =
         contenidoSeleccionado.style.display === "block";
 
-    // Cerramos todos los contenidos
-    document.querySelectorAll(".contenido").forEach(function(elemento) {
-        elemento.style.display = "none";
-    });
 
-    // Si estaba cerrado, lo abrimos
-    if (!estaAbierto) {
-        contenidoSeleccionado.style.display = "block";
+    // Si está abierto, cerrarlo con animación
+    if (estaAbierto) {
 
-        // Animación nueva cada vez que se abre
-        contenidoSeleccionado.style.animation = "none";
+        contenidoSeleccionado.style.animation =
+            "ocultarContenido 0.5s ease forwards";
 
+        // Esperar que termine la animación antes de ocultarlo
         setTimeout(function() {
+            contenidoSeleccionado.style.display = "none";
+            contenidoSeleccionado.style.animation = "";
+        }, 500);
+
+    } else {
+
+        // Buscar todos los contenidos
+        document.querySelectorAll(".contenido").forEach(function(elemento) {
+
+            // Cerrar los otros contenidos que estén abiertos
+            if (elemento.style.display === "block") {
+
+                elemento.style.animation =
+                    "ocultarContenido 0.5s ease forwards";
+
+                setTimeout(function() {
+                    elemento.style.display = "none";
+                    elemento.style.animation = "";
+                }, 500);
+            }
+        });
+
+
+        // Esperar un poco antes de mostrar el nuevo contenido
+        setTimeout(function() {
+
+            contenidoSeleccionado.style.display = "block";
             contenidoSeleccionado.style.animation =
                 "aparecerContenido 0.5s ease";
-        }, 10);
 
-        // Llevar suavemente hacia el contenido
-        contenidoSeleccionado.scrollIntoView({
-            behavior: "smooth",
-            block: "center"
-        });
+            // Llevar suavemente hacia el contenido
+            contenidoSeleccionado.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+        }, 500);
     }
 }
