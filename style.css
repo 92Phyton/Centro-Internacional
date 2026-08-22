@@ -265,4 +265,202 @@ h1 {
         width: 48px;
         height: 48px;
     }
+}/* =========================================
+   REDES SOCIALES INFERIORES
+   ========================================= */
+
+.redes-issacar,
+.redes-juda {
+    position: fixed;
+    bottom: 25px;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* RED ISSACAR - IZQUIERDA */
+.redes-issacar {
+    left: 25px;
+}
+
+
+/* RED JUDÁ - DERECHA */
+.redes-juda {
+    right: 25px;
+}
+
+
+/* BOTONES DE REDES */
+.red-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    min-width: 170px;
+    padding: 10px 16px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    color: #333;
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* MOVIMIENTO AL PASAR EL MOUSE */
+.red-social:hover {
+    transform: translateY(-5px) scale(1.03);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.45);
+}
+
+
+/* ICONOS */
+.icono {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+
+/* RED ISSACAR */
+.issacar .icono {
+    background: #222;
+    color: white;
+}
+
+.issacar:hover {
+    background: #f5f5f5;
+}
+
+
+/* FACEBOOK */
+.facebook-issacar .icono {
+    background: #1877f2;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.facebook-issacar:hover {
+    background: #eaf2ff;
+}
+
+
+/* TIKTOK ISSACAR */
+.tiktok-issacar .icono {
+    background: #000;
+    color: white;
+}
+
+.tiktok-issacar:hover {
+    background: #eeeeee;
+}
+
+
+/* TIKTOK JUDÁ */
+.tiktok-juda .icono {
+    background: #000;
+    color: white;
+}
+
+.tiktok-juda:hover {
+    background: #eeeeee;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .redes-issacar {
+        left: 15px;
+        bottom: 15px;
+    }
+
+    .redes-juda {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .red-social {
+        min-width: 145px;
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .icono {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+}
+
+
+/* =========================================
+   CELULAR
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .redes-issacar,
+    .redes-juda {
+        bottom: 10px;
+        gap: 6px;
+    }
+
+    .redes-issacar {
+        left: 8px;
+    }
+
+    .redes-juda {
+        right: 8px;
+    }
+
+    .red-social {
+        min-width: auto;
+        width: 48px;
+        height: 42px;
+
+        padding: 5px;
+
+        justify-content: center;
+
+        border-radius: 10px;
+    }
+
+    .red-social span:last-child {
+        display: none;
+    }
+
+    .icono {
+        width: 30px;
+        height: 30px;
+    }
 }
