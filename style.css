@@ -270,27 +270,9 @@ h1 {
    ========================================= */
 
 .redes-issacar,
-.redes-juda {
-    position: fixed;
-    bottom: 25px;
-    z-index: 1000;
-
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
 
 
-/* RED ISSACAR - IZQUIERDA */
-.redes-issacar {
-    left: 25px;
-}
 
-
-/* RED JUDÁ - DERECHA */
-.redes-juda {
-    right: 25px;
-}
 
 
 /* BOTONES DE REDES */
@@ -435,31 +417,43 @@ h1 {
 
 @media (max-width: 768px) {
 
-    /* RED ISSACAR - IZQUIERDA */
-    .redes-issacar {
-        position: fixed;
-        left: 10px;
-        bottom: 15px;
+    /* =========================================
+   REDES ISSACAR Y JUDÁ - AL FINAL DE LA PÁGINA
+   ========================================= */
 
-        display: flex;
+.redes-issacar,
+.redes-juda {
+    position: relative;      /* Ya no quedan flotando */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 30px auto;
+    z-index: 1;
+}
+
+/* Celular */
+@media (max-width: 768px){
+
+    .redes-issacar,
+    .redes-juda{
+        width: 100%;
         flex-direction: column;
-        gap: 8px;
-
-        z-index: 9999;
+        margin: 20px 0;
+        gap: 10px;
     }
 
-    /* RED JUDÁ - DERECHA */
-    .redes-juda {
-        position: fixed;
-        right: 10px;
-        bottom: 15px;
-
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-
-        z-index: 9999;
+    .red-social{
+        width: 90%;
+        max-width: 320px;
+        justify-content: flex-start;
     }
+
+    .logo-red{
+        width: 40px;
+        height: 40px;
+    }
+}
 
     /* BOTONES */
     .red-social {
